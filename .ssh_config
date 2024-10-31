@@ -1,0 +1,15 @@
+Host root
+  HostName rootnode.com
+  User tnguyenho
+  ProxyJump gateway
+
+Host rootx
+  ProxyCommand ssh root 'nc $(squeue -u tnguyenho --name=tunnel --states=R -h -O NodeList,Comment)'  
+  StrictHostKeyChecking no  
+  User tnguyenho
+
+Host rooty
+  RemoteCommand ssh -t root $(squeue -u tnguyenho --name=tunnel --states=R -h -O NodeList,Comment)
+  RequestTTY yes
+  StrictHostKeyChecking no
+  User tnguyenho
