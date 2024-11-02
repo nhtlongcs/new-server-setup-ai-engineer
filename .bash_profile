@@ -132,7 +132,8 @@ fi
 # <<< conda initialize <<<
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/cuda/cuda-12.3/lib64:~/cuda/cuda-12.3:~/cuda/cuda-12.3
-export PATH=/home/tnguyenho/cli:$PATH
+export PATH=~/cli/cli:$PATH
+export PATH=~/cli/bin/udocker-1.3.17/udocker:$PATH
 alias hfd="~/cli/hfd.sh"
 alias disk="~/cli/disk.sh"
 alias slurm="~/cli/cli/slurm.sh"
