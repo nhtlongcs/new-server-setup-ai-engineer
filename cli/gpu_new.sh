@@ -98,6 +98,7 @@ echo "-------------------"
 
 # The rest of your job script here
 echo "Found $node_name($partition_name) with $NUM_GPUS x $selected_gpu GPUs."
+partition_name=$(echo $partition_name | tr -d '*')
 
 # Export the configuration to a new SBATCH file
 cat <<EOL > job_submission.sbatch
