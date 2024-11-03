@@ -10,8 +10,14 @@ case "$1" in
     cancel)
         scancel -u $USER
         ;;
+    new)
+        bash gpu_new.sh $2 $3
+        ;;
+    find)
+        bash gpu_find.sh $2 $3
+        ;;
     *)
-        echo "Usage: $0 {info|queue|cancel}"
+        echo "Usage: $0 {info|queue|cancel|new|find}"
         exit 1
         ;;
 esac
