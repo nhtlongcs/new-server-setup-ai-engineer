@@ -24,7 +24,7 @@ case "$1" in
         bash ~/cli/gpu_find.sh $2 $3
         ;;
     *)
-        echo "Usage: $0 {info|queue|cancel|new|find}"
+        echo "Usage: $0 {info|kill|new|find}"
         exit 1
         ;;
 esac
