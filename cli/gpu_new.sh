@@ -16,6 +16,8 @@ HOURS=${2:-24}
 # Target partition
 # TARGET_PARTITION="compute"
 
+
+
 # Function to count available GPUs of a specific type on ready nodes
 count_available_gpus() {
     local gpu_type=$1

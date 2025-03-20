@@ -8,7 +8,7 @@
 
 # Priority order of GPUs
 declare -a gpu_priority=("a100" "rtxa6000" "rtx6000" "rtx2080ti" "titanv" "tesla")
-declare -a blacklist_nodes=("g122", "g105")
+declare -a blacklist_nodes=("g122", "g105", "g129")
 declare -a partition_list=("compute", "long")
 # Number of GPUs requested (default to 1 if not provided)
 NUM_GPUS=${1:-1}
